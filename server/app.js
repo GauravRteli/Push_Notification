@@ -22,7 +22,11 @@ webpush.setVapidDetails(
   apiKeys.privateKey
 );
 
-const allowedOrigins = ["http://localhost:3000", "https://65d6f4c16cb20f6ba1d7e39f--magnificent-klepon-49d0fe.netlify.app/"];
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://65d6f4c16cb20f6ba1d7e39f--magnificent-klepon-49d0fe.netlify.app/",
+  "https://push-notification-lemon.vercel.app",
+];
 
 const corsOptions = {
   origin: allowedOrigins,
@@ -36,7 +40,6 @@ app.get("/", (req, res) => {
 });
 
 const subDatabse = [];
-
 
 // for saving the subscription
 app.post("/save-subscription", (req, res) => {
