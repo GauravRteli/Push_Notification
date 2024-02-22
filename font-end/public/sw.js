@@ -15,7 +15,8 @@ const urlBase64ToUint8Array = base64String => {
 }
 
 const saveSubscription = async (subscription) => {
-    const response = await fetch('http://localhost:3000/save-subscription', {
+    const response = await fetch('https://push-notification-slwc.onrender.com/save-subscription', {
+    // const response = await fetch('http://localhost:3001/save-subscription', {
         method: 'post',
         headers: { 'Content-type': "application/json" },
         body: JSON.stringify(subscription)
@@ -34,6 +35,7 @@ self.addEventListener("activate", async (e) => {
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array("BLc5KPuZfVtKxxl-MXK6PT7ZqE583WlLcG500Y2BU_AbjNzjoR1Rz2yB_vVIugoQH17k22v1YS5pepNxiH-Y9nk")
     })
+    console.log("hey")
     console.log(subscription)
     const response = await saveSubscription(subscription)
     console.log(response)
