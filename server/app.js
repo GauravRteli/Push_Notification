@@ -37,6 +37,8 @@ app.get("/", (req, res) => {
 
 const subDatabse = [];
 
+
+// for saving the subscription
 app.post("/save-subscription", (req, res) => {
   subDatabse.push(req.body);
   console.log(req.body);
