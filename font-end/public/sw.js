@@ -15,7 +15,7 @@ const urlBase64ToUint8Array = base64String => {
 }
 
 const saveSubscription = async (subscription) => {
-    const response = await fetch('https://push-notification-slwc.onrender.com/save-subscription', {
+    const response = await fetch('https://push-notification-1.onrender.com/save-subscription', {
     // const response = await fetch('http://localhost:3001/save-subscription', {
         method: 'post',
         headers: { 'Content-type': "application/json" },
