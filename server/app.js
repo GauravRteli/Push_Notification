@@ -25,7 +25,7 @@ webpush.setVapidDetails(
 const allowedOrigins = [
   "http://localhost:3000",
   "https://65d6f4c16cb20f6ba1d7e39f--magnificent-klepon-49d0fe.netlify.app/",
-  "https://push-notification-lemon.vercel.app",
+  "https://push-notification-lemon.vercel.app/",
 ];
 
 const corsOptions = {
